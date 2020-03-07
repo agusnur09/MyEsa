@@ -1,10 +1,11 @@
 package com.assyfa.latihan.api;
 
 import com.assyfa.latihan.model.LoginRequest;
-import com.assyfa.latihan.model.Response;
+import com.assyfa.latihan.model.RegisterResponse;
 import com.assyfa.latihan.model.RegisterRequest;
 
 import io.reactivex.Observable;
+import retrofit2.Response;
 import retrofit2.http.Body;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
@@ -18,14 +19,14 @@ import retrofit2.http.Query;
 public interface ApiInterface {
 
     @POST("login.php")
-    Observable<Response<Response>> lakukanLogin(@Body LoginRequest data);
+    Observable<Response<RegisterResponse>> lakukanLogin(@Body LoginRequest data);
 
     @POST("register.php")
-    Observable<Response<Response>> lakukanRegister(@Body RegisterRequest data);
+    Observable<Response<RegisterResponse>> lakukanRegister(@Body RegisterRequest data);
 
 
     @POST("rest-api/05_daftar_member.php")
-    Observable<Response<Response>> doRegister(
+    Observable<Response<RegisterResponse>> doRegister(
             @Query("key") String key,
             @Query("nama_pelanggan") String nama_pelanggan,
             @Query("nomor_kontak") String nomor_kontak,

@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.assyfa.latihan.R
 import com.assyfa.latihan.base.BaseActivity
 import com.assyfa.latihan.model.LoginRequest
+import com.assyfa.latihan.model.RegisterResponse
 import io.reactivex.Observer
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
@@ -15,6 +16,7 @@ import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_register.etEmail
 import kotlinx.android.synthetic.main.activity_register.etPassword
+import retrofit2.Response
 
 class LoginActivity : AppCompatActivity() {
 
@@ -40,9 +42,9 @@ class LoginActivity : AppCompatActivity() {
         BaseActivity.apiService.lakukanLogin(data)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(object : Observer<Response<com.assyfa.latihan.model.Response>> {
+                .subscribe(object : Observer<Response<RegisterResponse>> {
                     override fun onSubscribe(d: Disposable) {}
-                    override fun onNext(response: Response<com.assyfa.latihan.model.Response>) {
+                    override fun onNext(response: Response<RegisterResponse>) {
                         if (response.code() == 200) {
                             if (!response.body()!!.error) // jika data login benar
                             {

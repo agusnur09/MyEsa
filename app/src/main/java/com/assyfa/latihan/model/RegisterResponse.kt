@@ -6,7 +6,7 @@ package com.assyfa.latihan.model
  * Visit me on ekosp.com
  */
 
-class Response(
+class RegisterResponse(
         val error: Boolean,
         val uid: String,
         val user: User

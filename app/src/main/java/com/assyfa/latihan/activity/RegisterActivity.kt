@@ -40,9 +40,9 @@ class RegisterActivity : BaseActivity() {
         apiService.lakukanRegister(data)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(object : Observer<Response<com.assyfa.latihan.model.Response>> {
+                .subscribe(object : Observer<Response<com.assyfa.latihan.model.RegisterResponse>> {
                     override fun onSubscribe(d: Disposable) {}
-                    override fun onNext(response: Response<com.assyfa.latihan.model.Response>) {
+                    override fun onNext(response: Response<com.assyfa.latihan.model.RegisterResponse>) {
                         if (response.code() == 200) {
                             bukaHalamanHomepage()
                             Toast.makeText(this@RegisterActivity, "Pendaftaran berhasil", Toast.LENGTH_SHORT).show()
