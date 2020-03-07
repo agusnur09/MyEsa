@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.RegisterActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Register Activity"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="102dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteY="28dp"
+       android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp" />
+
+    <EditText
+        android:id="@+id/etNama"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nama"
+        android:padding="8dp"
+        android:inputType="textEmailAddress"
+        android:textColor="#000"/>
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:padding="8dp"
+        android:inputType="textEmailAddress"
+        android:textColor="#000"/>
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="8dp"
+        android:textColor="#000"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:id="@+id/tombol_register"
+        android:text="Register" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:id="@+id/tombol_login"
+        android:text="Buka halaman login" />
+
+</LinearLayout>
